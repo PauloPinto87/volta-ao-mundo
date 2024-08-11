@@ -26,11 +26,7 @@ const CommonField = ({ myInfos, descarteGeral } ) => {
             )}
             <div className="container_descarte_geral">
                 <h3>Descarte Geral</h3>
-                <Card 
-                cardName={descarteGeral.nomeCarta}
-                type={descarteGeral.type}
-                icon={descarteGeral.icon}
-                />
+                <Card card={descarteGeral} />   
             </div>
 
         </section>

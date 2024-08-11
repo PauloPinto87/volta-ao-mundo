@@ -212,9 +212,11 @@ function descarte(indexCardDiscart, choice, socket) {
   } else if (choice === "Campo adversário") {
     target = enemyPlayer;
   } else {
+    target = {name: descarteGeral};
     descarteGeral.nomeCarta = cardDiscart.nomeCarta;
     descarteGeral.type = cardDiscart.type;
     descarteGeral.icon = cardDiscart.icon;
+
   }
 
   if (choice !== "Descarte geral") {
@@ -369,6 +371,7 @@ function descarte(indexCardDiscart, choice, socket) {
     }
   }
   if (finishDiscart) {
+    console.log(`O player ${player.name} descartou ${cardDiscart.nomeCarta} no ${target.name}`);
     player.handCards.splice(indexCardDiscart, 1);
 
     // Pela regra quem descarta uma defesa tem direito de comprar mais uma carta e descartar novamente

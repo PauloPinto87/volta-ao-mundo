@@ -17,8 +17,6 @@ const MyField = ({ myInfos }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [indexCardDiscart, setIndexCardDiscart] = useState(null);
 
-    console.log("MY TURN ========= ", steps);
-
     function comprarUmaCarta() {
         socket.emit("comprar_carta");
     }
