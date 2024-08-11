@@ -2,3 +2,7 @@
     background-image: url('../assets/background-table.jpeg');
     background-size: cover;
 }
+
+.enemy_common_box {
+    display: flex;
+}

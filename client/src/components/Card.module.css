@@ -11,7 +11,7 @@
     width: 120px;
     height: 180px;
 
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.458);
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.64);
 }
 
 .card span {

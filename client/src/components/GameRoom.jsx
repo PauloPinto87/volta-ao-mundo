@@ -1,8 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { socket } from "../socket";
-import _ from 'lodash';
-import styles from './GameRoom.module.css'
-
+import _ from "lodash";
+import styles from "./GameRoom.module.css";
 
 import MyField from "./MyField";
 import EnemyField from "./EnemyField";
@@ -44,9 +43,10 @@ const GameRoom = () => {
 
     return (
         <section className={styles.gameroom}>
-            <h1>Game Room</h1>
-            <EnemyField enemyInfos={enemyInfos} />
-            <CommonField myInfos={myInfos} descarteGeral={descarteGeral} />
+            <div className={styles.enemy_common_box}>
+                <CommonField myInfos={myInfos} descarteGeral={descarteGeral} />
+                <EnemyField enemyInfos={enemyInfos} />
+            </div>
             <MyField myInfos={myInfos} />
         </section>
     );

@@ -132,7 +132,7 @@ function jogadorConectado(socket, name) {
 function inicioPartida() {
   // Distribui 6 cartas para cada jogador
   playersList.map((player) => {
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 6; i++) {
       const card = drawCard();
       player.handCards.push(card);
     }
