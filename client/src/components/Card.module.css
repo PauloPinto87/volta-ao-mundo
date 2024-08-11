@@ -1,0 +1,43 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 4px;
+    margin: 5px;
+
+    width: 120px;
+    height: 180px;
+
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.458);
+}
+
+.card span {
+    font-size: 3em;
+}
+
+.card_terreno{
+    background-color: yellow;
+}
+
+.card_orientação{
+    background-color: green;
+}
+
+.card_contratempo{
+    background-color: red;
+}
+
+.card_liberação {
+    background-color: rgb(69, 169, 69);
+}
+
+.card_defesa {
+    background-color: rgb(0, 123, 255);
+}
+
+.card_1000, .card_2000, .card_4000, .card_5000, .card_8000{
+    background-color: grey;
+}

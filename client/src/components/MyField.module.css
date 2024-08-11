@@ -1,0 +1,64 @@
+head {
+    flex-direction: column;
+}
+
+
+.my_front_field, .my_hand_card {
+    display: flex;
+    flex-direction: row;
+}
+
+.my_front_field > section{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid white;
+}
+
+
+/* Config para as cartas de km's ficarem sobrepostas */
+.km_zone {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.km_zone > section {
+    position: relative;
+    width: 200px;
+    height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.km_zone > section > div {
+    position: absolute;
+    width: 180px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.km_zone > section > div:nth-child(1) {
+    top: 0;
+}
+
+.km_zone > section > div:nth-child(2) {
+    top: 30px;
+}
+
+.km_zone > section > div:nth-child(3) {
+    top: 60px;
+}
+
+.km_zone > section > div:nth-child(4) {
+    top: 90px;
+}
+
+.km_zone > section > div:nth-child(5) {
+    top: 120px;
+}
+
+.km_zone > section > div:nth-child(6) {
+    top: 150px;
+}
