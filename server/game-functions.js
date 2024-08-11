@@ -132,7 +132,7 @@ function jogadorConectado(socket, name) {
 function inicioPartida() {
   // Distribui 6 cartas para cada jogador
   playersList.map((player) => {
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 30; i++) {
       const card = drawCard();
       player.handCards.push(card);
     }
@@ -236,9 +236,33 @@ function descarte(indexCardDiscart, choice, socket) {
         break;
 
       //No caso em que o descarte é uma carta de contratempo
+      function verificaDefesaAdversario(nomeContratempo, nomeDefesa){
+        return (
+          cardDiscart.nomeCarta === nomeContratempo && 
+          !target.stacks.defesa.some(carta => carta.nomeCarta === nomeDefesa)
+        )
+      }
       case cardDiscart.type === "contratempo" &&
         target.stacks.batalha.type === "orientação":
-        target.stacks.batalha = cardDiscart;
+        switch (true){
+          case verificaDefesaAdversario("Perdido","Rotas Alternativas"):
+            target.stacks.batalha = cardDiscart;
+            break
+          case verificaDefesaAdversario("Epidemia","Saúde"):
+            target.stacks.batalha = cardDiscart;
+            break
+          case verificaDefesaAdversario("Fim do Dinheiro","Riqueza"):
+            target.stacks.batalha = cardDiscart;
+            break
+          case verificaDefesaAdversario("Povos Hostis","Diplomacia"):
+            target.stacks.batalha = cardDiscart;
+            break
+          default:
+            finishDiscart = false;
+            console.log(
+              `"A carta ${cardDiscart.nomeCarta} não atende aos requisitos de descarte"`
+            );
+        }
         break;
       //No caso em que o descarte é uma carta de liberação
       case cardDiscart.type === "liberação":
@@ -293,9 +317,11 @@ function descarte(indexCardDiscart, choice, socket) {
 
       //Quando o descarte é uma carta de viajem (quilometragem)
       case cardDiscart.type > 0 &&
-        target?.stacks?.batalha?.nomeCarta === "Orientação":
+        target?.stacks?.batalha?.nomeCarta === "Orientação" || 
+        target.stacks.defesa.some(carta => carta.nomeCarta === "Rotas Alternativas"):
         switch (true) {
-          case !target.stacks.terreno.nomeCarta:
+          case !target.stacks.terreno.nomeCarta || 
+          target.stacks.defesa.some(carta => carta.nomeCarta === "Rotas Alternativas"):
             destinarCartaQuilometros(target, cardDiscart);
             break;
           case target.stacks.terreno.nomeCarta ===
