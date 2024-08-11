@@ -3,7 +3,7 @@ import UserContext from "../contexts/UserContext";
 import { socket } from "../socket";
 import waitingImage from '../assets/waiting.gif';
 
-import style from './WaitingPlayer.module.css'
+import styles from './WaitingPlayer.module.css'
 
 const WaitingPlayer = () => {
     const { userName, setIsFullRoom } = useContext(UserContext);
@@ -21,9 +21,11 @@ const WaitingPlayer = () => {
     }, []);
 
     return (
-        <div className={style.container}>
-            <h3>Olá {userName}, aguardando o outro jogador conectar!</h3>
-            <img src={waitingImage} alt="aguardando" />
+        <div className={styles.container}>
+            <div className={styles.box_content}>
+                <h3>Olá {userName}, aguardando o outro jogador conectar!</h3>
+                <img src={waitingImage} alt="aguardando" />
+            </div>
         </div>
     );
 };

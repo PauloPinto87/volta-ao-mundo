@@ -1,10 +1,19 @@
-body {
+.container {
     background: url('../assets/background-login-waiting.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.container {
+
+
+.login_box {
     max-width: 320px;
     color: #fff;
     border-radius: 10px;
@@ -40,7 +49,7 @@ body {
     color: #fff;
 }
 
-button {
+.container form button {
     width: 100%;
     height: 45px;
     background-color: #fff;

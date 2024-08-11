@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { socket } from "../socket";
 import _ from 'lodash';
-import style from './GameRoom.module.css'
+import styles from './GameRoom.module.css'
 
 
 import MyField from "./MyField";
@@ -43,7 +43,7 @@ const GameRoom = () => {
     //console.log("descarteGeral -- >", descarteGeral);
 
     return (
-        <section className={style.gameroom}>
+        <section className={styles.gameroom}>
             <h1>Game Room</h1>
             <EnemyField enemyInfos={enemyInfos} />
             <CommonField myInfos={myInfos} descarteGeral={descarteGeral} />

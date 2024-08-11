@@ -1,4 +1,18 @@
 .container {
+    background: url('../assets/background-login-waiting.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box_content {
     max-width: 320px;
     max-height: 250px;
     color: #fff;
