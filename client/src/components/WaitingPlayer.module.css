@@ -1,0 +1,14 @@
+.container {
+    max-width: 320px;
+    max-height: 250px;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: #7926429d;
+}
+
+.container img{
+    width: 100px;
+    height: auto;
+}

@@ -1,0 +1,54 @@
+body {
+    background: url('../assets/background-login-waiting.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 320px;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 30px;
+    background-color: #7926429d;
+}
+
+.container .input_box {
+    width: 100%;
+    height: 50px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.input_box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(225, 225, 225, 0.2);
+    border-radius: 40px;
+    padding: 10px;
+    font-size: 0.5em;
+    color: #fff;
+}
+
+.input_box input::placeholder{
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 600;
+}
